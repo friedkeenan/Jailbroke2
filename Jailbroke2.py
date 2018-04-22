@@ -101,7 +101,7 @@ Deleted Content:
                                 break
                     if deleted:
                         continue
-                    if time.time()-i["accessed"]>=self.wait: #If not enough time has passed to be confident that the comment won't be deleted. It's 6 hours by default
+                    if time.time()-i["accessed"]>=self.wait: #If enough time has passed to be confident that the comment won't be deleted. It's 6 hours by default
                         self.to_check.remove(i)
             except Exception as e:
                 print(str(e))
