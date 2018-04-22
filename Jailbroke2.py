@@ -11,7 +11,9 @@ Removed by /u/{}
 
 Mod Reply:
 ***
+
 {}
+
 ***
 Author: /u/{}  
 Created at: {} (UTC)  
@@ -20,6 +22,7 @@ Score at deletion: {}
 
 Deleted Content:
 ***
+
 {}
 '''
     def __init__(self,post,client_secret,client_id,user_agent,username,password):
