@@ -7,7 +7,7 @@ from DataCollector import DataCollector
 from config import *
 class Jailbroke(DataCollector):
     body_format='''Removed at {} (UTC)  
-Removed by /u/{}
+Removed by [{}](https://reddit.com/user/{})
 
 Mod Reply:
 ***
@@ -111,6 +111,7 @@ Deleted Content:
     @classmethod
     def get_body(cls,t):
         return cls.body_format.format(dt.datetime.utcfromtimestamp(t["mod_reply"]["created"]).strftime("%Y-%m-%d %H:%M:%S"),
+                                    t["mod_reply"]["author"],
                                     t["mod_reply"]["author"],
                                     t["mod_reply"]["content"],
                                     t["author"],
