@@ -88,6 +88,7 @@ Deleted Content:
                     except: #If there was an exception, the object has no replies/comments
                         replies=None
                     if replies:
+                        replies.replace_more(limit=None)
                         for c in replies:
                             if self.mod_message in c.body and c.distinguished: #If a moderator replies with the standard message when something has been removed
                                 temp=i
